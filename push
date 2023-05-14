@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-repo='afreisinger/alpine-sshd'
+repo='afreisinger/ubuntu-sshd'
 
 def error(message)
   puts message

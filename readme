@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require 'dockerhub'
+
+username = 'afreisinger'
+password = 'wq7wDq4n1'
+repository = 'afreisinger/ubuntu-sshd'
+tag = '9.3'
+
+# Carga el contenido del archivo README.md
+readme = File.read('README.md')
+
+# Crea una instancia del cliente de Docker Hub y autentica
+client = DockerHub::Client.new(username, password)
+
+# Publica el README.md en Docker Hub
+response = client.update_repository(repository, description: readme)
+
+# Imprime la respuesta de Docker Hub
+puts response.inspect
+
+# Construye y publica la imagen en Docker Hub
+response = client.push_image(repository, tag)
+
+# Imprime la respuesta de Docker Hub
+puts response.inspect
