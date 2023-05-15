@@ -1,11 +1,11 @@
-FROM afreisinger/alpine-sshd:latest
+FROM afreisinger/ubuntu-sshd:latest
 ADD https://github.com/afreisinger.keys /home/afreisinger/.ssh/authorized_keys
 ADD https://github.com/afrojas.keys /home/afrojas/.ssh/authorized_keys
 RUN \
   passwd -d root && \
-  adduser -D -s /bin/ash afreisinger && \
+  adduser -D -s /bin/bash afreisinger && \
   passwd -u afreisinger && \
   chown -R afreisinger:afreisinger /home/afreisinger && \
-  adduser -D -s /bin/ash afrojas && \
+  adduser -D -s /bin/bash afrojas && \
   passwd -u afrojas && \
   chown -R afrojas:afrojas /home/afrojas
