@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#source ./bin/set_enviroment.sh
+source set_enviroment.sh
 TAG=$1
 
 function docker_tag_exists() {

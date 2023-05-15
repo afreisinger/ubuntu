@@ -1,4 +1,5 @@
 #!/bin/bash
+# Push description to Docker Hub image
 source /bin/set_enviroment.sh
 
 docker run --rm -v $PWD:/workspace \
