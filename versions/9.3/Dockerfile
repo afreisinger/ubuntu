@@ -19,6 +19,6 @@ sed -ri 's/^#?PasswordAuthentication\s+.*/PasswordAuthentication yes/' /etc/ssh/
 echo 'root:password' | chpasswd && \
 apt-get autoremove -y \
 && apt-get clean \
-&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/log/*gz ~/.cache/thumbnails/*
 
 #CMD service ssh start && nginx -g 'daemon off;'

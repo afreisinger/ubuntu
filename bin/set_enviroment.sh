@@ -12,4 +12,6 @@ export DOCKER_REGISTRY=docker.io
 #export CI_BUILD_REF=123456
 export CI_PIPELINE_ID=$(shuf -i 699999999-999999999 -n 1)
 #export $(xargs < .env) #It doesn't handle cases where the values have spaces
-set -a; . ./.env; set +a
+
+#set -a; . ./.env; set +a
+set -a; . $BIN_DIR/.env; set +a

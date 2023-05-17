@@ -1,6 +1,10 @@
 #!/bin/bash
 # Push description to Docker Hub image
-source /bin/set_enviroment.sh
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BIN_DIR="${SCRIPT_DIR}/bin"
+
+source $BIN_DIR/set_enviroment.sh
 
 docker run --rm -v $PWD:/workspace \
       -e DOCKERHUB_USERNAME="$DOCKER_REGISTRY_USER" \

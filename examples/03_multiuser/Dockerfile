@@ -1,6 +1,6 @@
 FROM afreisinger/ubuntu-sshd:latest
-ADD https://github.com/afreisinger.keys /home/afreisinger/.ssh/authorized_keys
-ADD https://github.com/afrojas.keys /home/afrojas/.ssh/authorized_keys
+ADD https://gitlab.com/afreisinger.keys /home/afreisinger/.ssh/authorized_keys
+ADD https://gitlab.com/afrojas.keys /home/afrojas/.ssh/authorized_keys
 RUN \
   passwd -d root && \
   adduser -D -s /bin/bash afreisinger && \

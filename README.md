@@ -2,13 +2,13 @@
 ---
 ### Ubuntu Linux SSHD
 
-A lightweight [OpenSSH][openssh] [Docker image][dockerhub_project] built atop [Ubuntu Linux][alpine_linux]. Available on [GitHub][github_project].
+A lightweight [OpenSSH][openssh] [Docker image][dockerhub_project] built atop [Ubuntu Linux][ubuntu_linux]. Available on [GitHub][github_project].
 
 The root password is "password". SSH host keys (RSA, DSA, ECDSA, and ED25519) are auto-generated when the container is started, unless already present.
 
 #### OpenSSL Version Tags
 
-- `9.3`, `latest` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, [Dockerfile](https://github.com/afreisinger/ubuntu-opensshserver/tree/master/versions/9.3/Dockerfile))
+- `9.3`, `latest` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, [Dockerfile](https://github.com/afreisinger/ubuntu-sshd/tree/master/versions/9.3/Dockerfile))
 
 ### Basic Usage
 
@@ -115,11 +115,11 @@ RUN \
 
 ### History
 
-    2023-05-09 Updated to OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023 (Alpine Linux 3.18.0).
+    2023-05-09 Updated to OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023 (Ubuntu Linux 18.04).
   
 
 [alpine_kubernetes]:  https://hub.docker.com/r/janeczku/alpine-kubernetes/
-[alpine_linux]:       https://hub.docker.com/_/alpine/
+[ubuntu_linux]:       https://hub.docker.com/_/ubuntu/
 [dockerhub_project]:  https://hub.docker.com/r/afreisinger/ubuntu-sshd/
 [examples]:           https://github.com/afreisinger/ubuntu-sshd/tree/master/examples/
 [github_project]:     https://github.com/afreisinger/ubuntu-sshd/
