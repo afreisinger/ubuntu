@@ -8,12 +8,14 @@ The root password is "password". SSH host keys (RSA, DSA, ECDSA, and ED25519) ar
 
 #### OpenSSL Version Tags
 
-- `9.3`, `latest` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, [Dockerfile](https://github.com/afreisinger/ubuntu-sshd/tree/master/versions/9.3/Dockerfile))
+- `18.04`, `bionic` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, [Dockerfile](https://github.com/afreisinger/ubuntu-sshd/tree/master/versions/18.04/Dockerfile))
+- `20.04`, `focal` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, [Dockerfile](https://github.com/afreisinger/ubuntu-sshd/tree/master/versions/20.04/Dockerfile))
+- `23.10`, `mantic`, `latest` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, [Dockerfile](https://github.com/afreisinger/ubuntu-sshd/tree/master/versions/23.10/Dockerfile))
 
 ### Basic Usage
 
 ```bash
-$ docker run --rm --publish=2222:22 afreisinger/ubuntu-sshd:9.3 # /entrypoint.sh
+$ docker run --rm --publish=2222:22 afreisinger/ubuntu:18.04 # /entrypoint.sh
 ssh-keygen: generating new host keys: RSA DSA ECDSA ED25519
 Server listening on 0.0.0.0 port 22.
 Server listening on :: port 22.
@@ -22,26 +24,26 @@ $ ssh root@localhost -p 2222  # or $(docker-machine ip default)
 # The root password is "password".
 
 $ docker ps | grep 2222
-cf8097ea881d        afreisinger/ubuntu-sshd:9.3   "/entrypoint.sh"    8 seconds ago       Up 4 seconds        0.0.0.0:2222->22/tcp   stoic_ptolemy
+cf8097ea881d        afreisinger/ubuntu:18.04   "/entrypoint.sh"    8 seconds ago       Up 4 seconds        0.0.0.0:2222->22/tcp   stoic_ptolemy
 $ docker stop cf80
 ```
 
 Any arguments are passed to `sshd`. For example, to enable debug output:
 
 ```bash
-$ docker run --rm --publish=2222:22 afreisinger/ubuntu-sshd:9.3 -o LogLevel=DEBUG
+$ docker run --rm --publish=2222:22 afreisinger/ubuntu:18.04 -o LogLevel=DEBUG
 ...
 ```
 
 #### Version Info
 
 ```bash
-$ docker run --rm afreisinger/ubuntu-sshd:9.3 -v
+$ docker run --rm afreisinger/ubuntu:18.04 -v
 ...
 OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023
 ...
 
-$ docker run --rm --entrypoint=cat afreisinger/ubuntu-sshd:9.3 /etc/os-release
+$ docker run --rm --entrypoint=cat afreisinger/ubuntu:18.04 /etc/os-release
 
 NAME="Ubuntu"
 VERSION="18.04.6 LTS (Bionic Beaver)"
@@ -116,6 +118,8 @@ RUN \
 ### History
 
     2023-05-09 Updated to OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023 (Ubuntu Linux 18.04).
+    2023-05-20 Updated to OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023 (Ubuntu Linux 20.04).
+    2023-05-20 Updated to OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023 (Ubuntu Linux 23.10).
   
 
 [alpine_kubernetes]:  https://hub.docker.com/r/janeczku/alpine-kubernetes/
