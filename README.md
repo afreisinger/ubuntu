@@ -122,7 +122,7 @@ RUN \
 
 [alpine_kubernetes]:  https://hub.docker.com/r/janeczku/alpine-kubernetes/
 [ubuntu_linux]:       https://hub.docker.com/_/ubuntu/
-[dockerhub_project]:  https://hub.docker.com/r/afreisinger/ubuntu-sshd/
-[examples]:           https://github.com/afreisinger/ubuntu-sshd/tree/master/examples/
-[github_project]:     https://github.com/afreisinger/ubuntu-sshd/
+[dockerhub_project]:  https://hub.docker.com/r/afreisinger/ubuntu/
+[examples]:           https://github.com/afreisinger/ubuntu/tree/master/examples/
+[github_project]:     https://github.com/afreisinger/ubuntu/
 [openssh]:            http://www.openssh.com
