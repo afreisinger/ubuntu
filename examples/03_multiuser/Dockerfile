@@ -1,4 +1,4 @@
-FROM afreisinger/ubuntu-sshd:latest
+FROM afreisinger/ubuntu:18.04
 ADD https://gitlab.com/afreisinger.keys /home/afreisinger/.ssh/authorized_keys
 ADD https://gitlab.com/afrojas.keys /home/afrojas/.ssh/authorized_keys
 RUN \

@@ -1,4 +1,4 @@
-FROM afreisinger/ubuntu-sshd:9.3
+FROM afreisinger/ubuntu:18.04
 ADD https://gitlab.com/afreisinger.keys /afreisinger/.ssh/authorized_keys
 RUN \
   passwd -d root && \
