@@ -8,10 +8,12 @@ The root password is "password". SSH host keys (RSA, DSA, ECDSA, and ED25519) ar
 
 #### OpenSSL Version Tags
 
-- `1.0` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, Ubuntu 18.04 , Personal host key, [Dockerfile](https://github.com/afreisinger/ubuntu/tree/master/versions/1.0/Dockerfile))
+- `1.0` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, ubuntu 18.04 , Personal host key, [Dockerfile](https://github.com/afreisinger/ubuntu/tree/master/versions/1.0/Dockerfile))
+- `2.0` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, amd64/ubuntu 18.04 , [Dockerfile](https://github.com/afreisinger/ubuntu/tree/master/versions/2.0/Dockerfile))
+- `2.1` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, amd64/ubuntu 18.04 , Personal host key, [Dockerfile](https://github.com/afreisinger/ubuntu/tree/master/versions/2.1/Dockerfile))
 - `18.04`, `bionic` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, [Dockerfile](https://github.com/afreisinger/ubuntu/tree/master/versions/18.04/Dockerfile))
 - `20.04`, `focal` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, [Dockerfile](https://github.com/afreisinger/ubuntu/tree/master/versions/20.04/Dockerfile))
-- `23.10`, `mantic`, `latest` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, [Dockerfile](https://github.com/afreisinger/ubuntu/tree/master/versions/23.10/Dockerfile))
+- `22.04`, `jamy`, `latest` (OpenSSH_9.3p1, OpenSSL 3.1.0 14 Mar 2023, [Dockerfile](https://github.com/afreisinger/ubuntu/tree/master/versions/22.04/Dockerfile))
 
 ### Basic Usage
 
