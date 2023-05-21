@@ -68,7 +68,7 @@ This image doesn't attempt to be "the one" solution that suits everyone's needs.
 Change the root password to something more fun, like "password" or "sunshine":
 
 ```dockerfile
-FROM afreisinger/ubuntu-sshd:latest
+FROM afreisinger/ubuntu:18.04
 RUN echo "root:sunshine" | chpasswd
 ```
 
@@ -77,7 +77,7 @@ RUN echo "root:sunshine" | chpasswd
 Disable the root password completely, and use your SSH key instead:
 
 ```dockerfile
-FROM afreisinger/ubuntu-sshd:latest
+FROM afreisinger/ubuntu:18.04
 RUN passwd -d root
 COPY id_rsa.pub /root/.ssh/authorized_keys
 ```
@@ -87,7 +87,7 @@ COPY id_rsa.pub /root/.ssh/authorized_keys
 Disable root and create individual user accounts:
 
 ```dockerfile
-FROM afreisinger/ubuntu-sshd:latest
+FROM afreisinger/ubuntu:18.04
 ADD https://gitlab.com/afreisinger.keys /home/afreisinger/.ssh/authorized_keys
 ADD https://gitlab.com/afrojas.keys /home/afrojas/.ssh/authorized_keys
 RUN \
@@ -105,7 +105,7 @@ RUN \
 Embed SSH host keys directly in your private image (via `ssh-keygen -A`), so you can treat your containers like cattle.
 
 ```dockerfile
-FROM afreisinger/ubuntu-sshd:latest
+FROM afreisinger/ubuntu:18.04
 ADD https://gitlab.com/afreisinger.keys /home/afreisinger/.ssh/authorized_keys
 RUN \
   passwd -d root && \
