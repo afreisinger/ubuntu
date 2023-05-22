@@ -1,4 +1,4 @@
-FROM afreisinger/ubuntu:amd64
+FROM afreisinger/ubuntu:18.04-amd64
 
 ADD https://gitlab.com/afreisinger.keys /tmp/authorized_keys
 
